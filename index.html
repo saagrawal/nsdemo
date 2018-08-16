@@ -1,0 +1,31 @@
+<html><head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- load the webcomponents loader, which injects the necessary polyfill bundle -->
+    <script src="https://nsw-service.vrsn.com/1.0/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- load the element -->
+    <script type="module" crossorigin="" src="https://nsw-service.vrsn.com/1.0/name-studio.js"></script>
+    <!-- for browsers that do not support es6 modules -->
+    <script nomodule="" crossorigin="" src="https://nsw-service.vrsn.com/1.0/name-studio.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            document.addEventListener('name-studio.verisign',function(evt) {
+                <!-- console.log(`name-studio(${evt.detail.type})`,evt.detail); -->
+                console.log("name-studio ("+ (evt.detail.type)+")",evt.detail);
+            },false);
+        }());
+
+
+    </script>
+</head>
+<body>
+<ps> This is my Name Studio Webtool Page </ps>
+<name-studio tlds="com,net,tv,cc,jobs" api-key="2c732102c5130f7b5c2f76ab067bee1b" env="qa" theme="light">
+</name-studio>
+
+
+</body></html>
